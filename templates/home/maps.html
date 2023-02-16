@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block mapsactive %} active {% endblock mapsactive %}
+
+{% block body %}
+
+<div class="row">
+    {% for i in maps %}
+    <div class="col-md-4 mt-5">
+        <figure class="card card-product-grid">
+                <img src="{{ i.image.url }}" height="300" weight="300">
+        </figure>
+    </div> <!-- col.// -->
+    {% endfor %}
+</div> <!-- row end.// -->
+
+{% endblock body %}

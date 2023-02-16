@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block contactactive %} active {% endblock contactactive %}
+{% block body %}
+
+<h3 style="text-align:center">Contact our Admin</h3>
+<div class="container my-3">
+   
+    {% comment %} <div class="row"> {% endcomment %}
+        {% comment %} <div class="card"> {% endcomment %}
+            {% comment %} <h3>Contact Form</h3> {% endcomment %}
+        <form action="/contact/" method="post">
+        {% csrf_token %}
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your Phone with anyone else.</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="content">Address</label>
+                <textarea class="form-control" name="address" id="content" cols="30" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="content">Describe your Map's requirements:</label>
+                <textarea class="form-control" name="map_requirements" id="content" cols="30" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="content">plot_size (sq ft):</label>
+                <input type="tel" class="form-control" id="plot_size" name="plot_size">
+            </div>
+
+            <div class="form-group">
+                <label for="content">road_direction:</label>
+                <input type="text" class="form-control" id="road_direction" name="road_direction">
+            </div>
+            
+            <button type="submit" id=""class="btn btn-primary">Submit</button>
+        </form>
+    {% comment %} </div> {% endcomment %}
+    {% comment %} <div class="row" style="overflow:hidden;">
+        <div class="col-md-10 offset-md-1" style="position:absolute;">
+            <h3>Direction</h3>
+            <p><a href="{% url 'address' %}">Click Here to Mark your address</a></p>
+        </div>
+    </div> {% endcomment %}
+{% comment %} </div> {% endcomment %}
+{% endblock body %}
+

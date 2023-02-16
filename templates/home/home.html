@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block homeactive %} active {% endblock homeactive %}
+{% block body %}
+
+{% if messages %}
+{% for msg in messages %}
+<div class="alert alert-success" role="alert" id="success-alert" style="text-align:center;">
+  {{ msg }}
+</div>
+{% endfor %}
+{% endif %}
+<div class="container">
+  <div class="jumbotron my-3">
+    <h1 class="display-4">Welcome to Jodhpur House Design!</h1>
+    <p class="lead">We will provide you the best vastu location for your house.</p>
+    <hr class="my-4">
+    <p>Fill our contact form so that our executive can give you a call, Or if you want to talk to our Executive. </p>
+    <a class="btn btn-primary btn-lg" href="contact/" role="button">Contact Us</a>
+  </div>
+</div>
+<div class="container">
+  <div class="jumbotron my-3">
+    <h1 class="display-4">What we can do?</h1>
+    <p class="lead">
+      We can reach to the core of situations caused by the design and structure of the maps of your house.
+    </p>
+    <p class="lead"><small>"घर के नक्शे व बनावट से आने वाली घटना तक पहुंचा जा सकता है"</small>
+    <p class="lead" style="text-align:right">
+      Real beauty of the house is it's Happyness. Not Beautifull house with sad faces.
+    </p>
+    <p class="lead" style="text-align:right"><small>"घर की असली सुंदरता तो घर की खुशियां हैं;
+      ना कि सुंदर घरो में उदास चेहरे"
+    </small></p>
+    <p class="lead">
+      Get vastu to bring happiness and joy to your house.
+    </p>
+    <p class="lead"><small>"घर में खुशियां लाने के लिए वास्तु अनुकूल खुशियों वाला नक्शा बनवाए"
+    </small></p>
+    <p class="lead" style="text-align:right">
+      Don't tend to design your house by just impressed by the outside beauty,<br>
+      instead design your house interior in right manners because it is the soul of your house. 
+    </p>
+    <p class="lead" style="text-align:right"><small>
+      "घर की बाहरी सुंदरता देखकर स्वयं का घर वैसा डिजाइन करने के लिए मोहित ना हो;<br>
+       बल्कि घर की आंतरिक बनावट अनुपातिक है या नहीं, को देखें क्योंकि, यह घर की आत्मा है"
+    </small></p>
+    <hr class="my-4">
+    <p>Fill our contact form so that our executive can give you a call, Or if you want to talk to our Executive. </p>
+    <a class="btn btn-primary btn-lg" href="contact/" role="button">Contact Us</a>
+  </div>
+</div>
+<div class="container">
+  <h4>We also provide Designs & Maps for your house!</h4>
+  <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+    <div class="row">
+      <div class="col p-4 d-flex flex-column position-static">
+      <strong class="d-inline-block mb-2 text-primary">Vastu Designs</strong>
+      <a href="{% url 'design' %}" class="mb-0">Featured Design</a>
+      </div>
+    </div>       
+    <div class="row ml-auto form-inline">
+      <div class="col p-4 d-flex flex-column position-static">
+      <strong class="d-inline-block mb-2 text-primary"  style="text-align:right;">Vastu Maps</strong>
+      <a href="{% url 'maps' %}" class="mb-0" style="text-align:right;">Featured Maps</a>
+      </div>
+    </div>       
+  </div>
+</div>
+
+{% endblock body %}
